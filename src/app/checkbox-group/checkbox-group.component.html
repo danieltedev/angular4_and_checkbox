@@ -1,0 +1,9 @@
+<form [formGroup]="form">
+  <fieldset>
+    <div *ngFor="let skill of skillList">
+      <input type="checkbox" (change)="onChange(skill, $event.target.checked)">
+      <label>{{ skill.descricao }}</label>
+    </div>
+  </fieldset>
+</form>
+<pre>{{ form.value | json }}</pre>
